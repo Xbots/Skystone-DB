@@ -58,9 +58,9 @@ public class SkystoneAutoTestGoB extends LinearOpMode {
 
       if (opModeIsActive()) {
           driveX(DS, robot.getXHeadingGyro(), 20);
-//         strafeRight(1, 10);
+          strafeRight(1, 10);
           driveXback(DS, robot.getXHeadingGyro(), 20);
-          //strafeLeft(DS, 10);
+          strafeLeft(DS, 10);
           //sleep(2000);
           //rotate(90);
           //d.closeDebugger();
@@ -92,7 +92,7 @@ public class SkystoneAutoTestGoB extends LinearOpMode {
         //telemetry.update();
         dist = dist * ENC_PER_INCH;
 
-        while(opModeIsActive()  && robot.fr.getCurrentPosition() > -dist) {
+        while(opModeIsActive()  && robot.fr.getCurrentPosition() < dist) {
             moveXBackward (backwardSpeed, startHeading);
             telemetry.addData("enc val: ", robot.fr.getCurrentPosition());
             telemetry.update();

@@ -83,14 +83,16 @@ public class GB_TeleOp extends OpMode {
         }
 
 // Base Platform
-       if(gamepad1.right_trigger >= 0.5) {
+       if(gamepad2.dpad_up)
+        {
             robot.leftbase.setPosition(0.12);
-            robot.rightbase.setPosition(0.28);
+            robot.rightbase.setPosition(0.48);
 
-       }
-        else
-        if(gamepad1.left_trigger >= 0.5) {
-            robot.leftbase.setPosition(0.28);
+        }
+        //else
+        if(gamepad2.dpad_down)
+        {
+            robot.leftbase.setPosition(0.48);
             robot.rightbase.setPosition(0.12);
         }
     }

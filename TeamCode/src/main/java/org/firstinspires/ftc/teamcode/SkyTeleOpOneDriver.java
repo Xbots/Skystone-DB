@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -8,7 +9,7 @@ import com.qualcomm.robotcore.util.Range;
 
 import static java.lang.Math.abs;
 
-
+@Disabled
 @TeleOp(name="Skystone: TeleOp Flex", group="Skystone")
 public class SkyTeleOpOneDriver extends OpMode {
 
@@ -83,11 +84,11 @@ public class SkyTeleOpOneDriver extends OpMode {
 
         // COLLECTION and INTAKE of MINERALS GAMEPAD1
         if(gamepad1.right_trigger >= 0.5) {
-            robot.base.setPosition(0.12);
+            robot.leftbase.setPosition(0.12);
         }
         else
         if(gamepad1.left_trigger >= 0.5) {
-            robot.base.setPosition(0.28);
+            robot.leftbase.setPosition(0.28);
         }
 
 
