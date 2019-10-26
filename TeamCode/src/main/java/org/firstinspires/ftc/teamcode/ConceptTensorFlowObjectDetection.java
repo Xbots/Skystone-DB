@@ -51,7 +51,7 @@ import java.util.List;
  * is explained below.
  */
 @TeleOp(name = "Concept: TensorFlow Object Detection", group = "Concept")
-public class ConceptTensorFlowObjectDetection extends LinearOpMode {
+public class ConceptTensorFlowObjectDetection extends SkystoneCommon {
     private static final String TFOD_MODEL_ASSET = "Skystone.tflite";
     private static final String LABEL_FIRST_ELEMENT = "Stone";
     private static final String LABEL_SECOND_ELEMENT = "Skystone";
@@ -107,6 +107,9 @@ public class ConceptTensorFlowObjectDetection extends LinearOpMode {
         telemetry.update();
         waitForStart();
 
+        driveX(DS, robot.getXHeadingGyro(), 24);
+        strafeRight(1, 10);
+
         if (opModeIsActive()) {
             while (opModeIsActive()) {
                 if (tfod != null) {
@@ -124,6 +127,7 @@ public class ConceptTensorFlowObjectDetection extends LinearOpMode {
                                           recognition.getLeft(), recognition.getTop());
                         telemetry.addData(String.format("  right,bottom (%d)", i), "%.03f , %.03f",
                                 recognition.getRight(), recognition.getBottom());
+
                       }
                       telemetry.update();
                     }
