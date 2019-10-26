@@ -72,13 +72,12 @@ public class GobildaDemo extends OpMode {
             robot.bl.setPower(speed_multiplier *( speed_reverse* (gamepad2.left_stick_y + gamepad2.left_stick_x)/2-(gamepad2.right_stick_x)/2));
             robot.fr.setPower(speed_multiplier *( speed_reverse* (-gamepad2.left_stick_y - gamepad2.left_stick_x)/2-(gamepad2.right_stick_x)/2));
             robot.br.setPower(speed_multiplier *( speed_reverse* (-gamepad2.left_stick_y + gamepad2.left_stick_x)/2-(gamepad2.right_stick_x)/2));
-/*
+
             telemetry.addData("fl.enc ",robot.fl.getCurrentPosition());
             telemetry.addData("fr.enc ",robot.fr.getCurrentPosition());
             telemetry.addData("bl.enc ",robot.bl.getCurrentPosition());
             telemetry.addData("br.enc ",robot.br.getCurrentPosition());
             telemetry.update();
-            */
         }
 
 
