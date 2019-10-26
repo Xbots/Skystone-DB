@@ -69,6 +69,12 @@ public class HardwareStone {
 
         gyro = hwMap.get(BNO055IMU.class, "gyro");
         gyro.initialize(parameters);
+
+        fl.setDirection(DcMotor.Direction.REVERSE);
+        fr.setDirection(DcMotor.Direction.REVERSE);
+        bl.setDirection(DcMotor.Direction.REVERSE);
+        br.setDirection(DcMotor.Direction.REVERSE);
+
         fl.setPower(sp);
         fr.setPower(sp);
         bl.setPower(sp);
