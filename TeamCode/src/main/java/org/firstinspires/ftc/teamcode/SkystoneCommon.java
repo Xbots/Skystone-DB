@@ -56,7 +56,7 @@ public class SkystoneCommon extends LinearOpMode {
         telemetry.addData("enc val start: ", encVal);
 
         while(opModeIsActive() && robot.fl.getCurrentPosition() < dist) {
-            double encVal = robot.fl.getCurrentPosition();
+            encVal = robot.fl.getCurrentPosition();
             telemetry.addData("enc val: ", encVal);
             telemetry.update();
             moveXForward (forwardSpeed, startHeading);
